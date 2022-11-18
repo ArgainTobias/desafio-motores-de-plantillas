@@ -1,0 +1,15 @@
+<%- include('./partials/head')  %> 
+<div>
+    <% if (hay) { %>     
+        <% productos.forEach(producto => { %>
+            <div style="display: flex; justify-content:space-around">
+                <p><%= producto.nombre %> </p>
+                <p><%= producto.precio %> </p>
+                <img src="<%= producto.img %>" alt="<%= producto.nombre %>"  style="height: 120px;">
+            </div>
+        <% }) %>
+    <% } else { %>
+        <h4>No hay productos</h4>
+    <% } %>
+    <a href="/">Agregar un producto</a>
+</div>

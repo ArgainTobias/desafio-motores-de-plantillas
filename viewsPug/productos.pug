@@ -1,0 +1,10 @@
+div
+    if hay 
+        each producto in productos
+            div(style='display: flex; justify-content:space-around')
+                p=producto.nombre
+                p=`$${producto.precio}`
+                img(src=producto.img alt=producto.nombre style='height: 120px;')
+    else
+        h4 No hay productos
+a(href='/') Agregar un producto
